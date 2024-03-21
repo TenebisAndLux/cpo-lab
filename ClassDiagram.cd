@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Engine" Collapsed="true">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAADAABAAAAAABAAAAAAIAAAAAAAAAA=</HashCode>
+      <FileName>Engine.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DieselEngine" Collapsed="true">
+    <Position X="6.25" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgACAAAAAEAAABAAAAQAAAAAAAAAAAAAAAAAAIAAAAA=</HashCode>
+      <FileName>DieselEngine.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GasolineEngine" Collapsed="true">
+    <Position X="10.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAABAAYAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAg=</HashCode>
+      <FileName>GasolineEngine.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GasTurbine" Collapsed="true">
+    <Position X="1.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQBAIAAAAAICAAAAAAAABAEAAAAgAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>GasTurbine.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HybridEngine" Collapsed="true">
+    <Position X="8.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BIgABAAAAAAEAAAAAgAQAAAgAAAAAAAAAAAACBAAAAA=</HashCode>
+      <FileName>HybridEngine.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InternalCombustionEngine" Collapsed="true">
+    <Position X="8.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAIAACAAAAAEAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>InternalCombustionEngine.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SteamTurbine" Collapsed="true">
+    <Position X="4" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAEAAAAAAAAQAAAAAAAAQAAAAAAAAAggAQQAAAA=</HashCode>
+      <FileName>SteamTurbine.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Turbine" Collapsed="true">
+    <Position X="2.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IoEAAAAAAAAAAAAAAIAAAAAAAAAAAACAAAAAAAAAAAA=</HashCode>
+      <FileName>Turbine.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Arial" Size="9" />
+</ClassDiagram>
