@@ -1,0 +1,90 @@
+﻿<Window x:Class="lab_3.FormGasolineEngine"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:lab_3"
+        mc:Ignorable="d"
+        Title="FormGasolineEngine" Height="450" Width="450">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.Column="0" Grid.Row="0">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Label Grid.Column="0" Grid.Row="0">Идентификатор</Label>
+            <TextBox Name="textBoxId" Grid.Column="1" Grid.Row="0" Margin="5 5 5 5" IsReadOnly="True" Text="{Binding Id}"/>
+
+            <Label Grid.Column= "0" Grid.Row="1"> Изменение фаз газораспределения </Label>
+            <TextBox Name="textBoxVVTLevel" Grid.Column="1" Grid.Row="1" Margin="5 5 5 5" Text="{Binding VVTLevel}" />
+            
+            <Label Grid.Column= "0" Grid.Row="2"> Соотношение воздух-топливо </Label>
+            <TextBox Name="textBoxAirFuelRatio" Grid.Column="1" Grid.Row="2" Margin="5 5 5 5" Text="{Binding AirFuelRatio}" />
+
+            <Label Grid.Column= "0" Grid.Row="3"> Октановое число бензина </Label>
+            <TextBox Name="textBoxParOctaneRating" Grid.Column="1" Grid.Row="3" Margin="5 5 5 5" Text="{Binding OctaneRating}" />
+
+            <Label Grid.Column="0" Grid.Row="4">Мощность, л.с.</Label>
+            <TextBox Name="textBoxPower" Grid.Column="1" Grid.Row="4" Margin="5 5 5 5" Text="{Binding EngineSpecification.Power}" />
+
+            <Label Grid.Column="0" Grid.Row="5">Крутящий момент, Нм.</Label>
+            <TextBox Name="textBoxTorque" Grid.Column="1" Grid.Row="5" Margin="5 5 5 5" Text="{Binding EngineSpecification.Torque}" />
+
+            <Label Grid.Column="0" Grid.Row="6">Производитель</Label>
+            <TextBox Name="textBoxManufacturer" Grid.Column="1" Grid.Row="6" Margin="5 5 5 5" Text="{Binding Brand.Manufacturer}" />
+
+            <Label Grid.Column="0" Grid.Row="7">Модель</Label>
+            <TextBox Name="textBoxModel" Grid.Column="1" Grid.Row="7" Margin="5 5 5 5" Text="{Binding Brand.Model}" />
+
+            <Label Grid.Column="0" Grid.Row="8">Количество цилиндров</Label>
+            <TextBox Name="textBoxCylinders" Grid.Column="1" Grid.Row="8" Margin="5 5 5 5" Text="{Binding Сylinders}" />
+
+            <Label Grid.Column="0" Grid.Row="9">Описание типа зажигания</Label>
+            <ComboBox Name="comboBoxIgnitionType" Grid.Column="1" Grid.Row="9" Margin="5 5 5 5"  
+            ItemsSource="{Binding IgnitionTypesList}" 
+            SelectedValue="{Binding Brand.IgnitionType, Mode=TwoWay}" 
+            SelectedValuePath="Content"/>
+
+            <Label Grid.Column="0" Grid.Row="10">Тип топлива</Label>
+            <ComboBox Name="comboBoxFuelType" Grid.Column="1" Grid.Row="10" Margin="5 5 5 5"  
+          ItemsSource="{Binding FuelTypesList}" 
+          SelectedValue="{Binding Brand.FuelType, Mode=TwoWay}" 
+          SelectedValuePath="Content"/>
+        </Grid>
+
+        <Grid Grid.Column="0" Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.5*"/>
+                <ColumnDefinition Width="0.5*"/>
+            </Grid.ColumnDefinitions>
+
+            <Button Name="buttonFormAction" Grid.Column="0" Grid.Row="0" IsDefault="true" Margin="5 5 5 5" Content="Действие" Click="ButtonFormAction_Click"/>
+            <Button Name="buttonCancel" Grid.Column="1" Grid.Row="0" IsCancel="true" Margin="5 5 5 5" Content="Отмена"/>
+        </Grid>
+    </Grid>
+</Window>
+

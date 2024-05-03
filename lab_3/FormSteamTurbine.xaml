@@ -1,0 +1,81 @@
+﻿<Window x:Class="lab_3.FormSteamTurbine"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:lab_3"
+        mc:Ignorable="d"
+        Title="Создание турбины с паром" Height="430" Width="450"
+        DataContext="{Binding RelativeSource={RelativeSource Self}}">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Column="0" Grid.Row="0">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Label Grid.Column="0" Grid.Row="0">Идентификатор</Label>
+            <TextBox Name="textBoxId" Grid.Column="1" Grid.Row="0" Margin="5 5 5 5" IsReadOnly="True" Text="{Binding Id, Mode=OneWay}" />
+
+            <Label Grid.Column="0" Grid.Row="1">Длина лопастей</Label>
+            <TextBox Name="textBoxTurbineBladeLength" Grid.Column="1" Grid.Row="1" Margin="5 5 5 5" Text="{Binding TurbineBladeLength}" />
+
+            <Label Grid.Column="0" Grid.Row="2">Поток пара, л/с</Label>
+            <TextBox Name="textBoxSteamFlowRate" Grid.Column="1" Grid.Row="2" Margin="5 5 5 5" Text="{Binding SteamFlowRate}" />
+
+            <Label Grid.Column="0" Grid.Row="3">Макс. скорость пара, м/с</Label>
+            <TextBox Name="textBoxMaxSteamVelocity" Grid.Column="1" Grid.Row="3" Margin="5 5 5 5" Text="{Binding MaxSteamVelocity}" />
+
+            <Label Grid.Column="0" Grid.Row="4">Качество пара</Label>
+            <TextBox Name="textBoxSteamQuality" Grid.Column="1" Grid.Row="4" Margin="5 5 5 5" Text="{Binding SteamQuality}" />
+
+            <Label Grid.Column="0" Grid.Row="5">Мощность, л.с.</Label>
+            <TextBox Name="textBoxPower" Grid.Column="1" Grid.Row="5" Margin="5 5 5 5" Text="{Binding EngineSpecification.Power}" />
+
+            <Label Grid.Column="0" Grid.Row="6">Крутящий момент, Нм.</Label>
+            <TextBox Name="textBoxTorque" Grid.Column="1" Grid.Row="6" Margin="5 5 5 5" Text="{Binding EngineSpecification.Torque}" />
+
+            <Label Grid.Column="0" Grid.Row="7" Content="Производитель:" />
+            <TextBox Name="textBoxManufacturer" Grid.Column="1" Grid.Row="7" Margin="5" Text="{Binding Brand.Manufacturer, Mode=TwoWay}" />
+
+            <Label Grid.Column="0" Grid.Row="8">Модель</Label>
+            <TextBox Name="textBoxModel" Grid.Column="1" Grid.Row="8" Margin="5 5 5 5" Text="{Binding Brand.Model, Mode=TwoWay}" />
+            
+            <Label Grid.Column="0" Grid.Row="9">Эффективность</Label>
+            <TextBox Name="textBoxEfficiency" Grid.Column="1" Grid.Row="9" Margin="5 5 5 5" Text="{Binding Efficiency}" />
+
+        </Grid>
+
+        <Grid Grid.Column="0" Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.5*"/>
+                <ColumnDefinition Width="0.5*"/>
+            </Grid.ColumnDefinitions>
+
+            <Button Name="buttonFormAction" Grid.Column="0" Margin="5 5 5 5" Content="Создать" Click="ButtonFormAction_Click"/>
+            <Button Name="buttonCancel" Grid.Column="1" IsCancel="true" Margin="5 5 5 5" Content="Отмена"/>
+        </Grid>
+
+    </Grid>
+</Window>
+
+
